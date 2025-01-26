@@ -1,9 +1,9 @@
 import express from "express";
-import { cleanupMiddleware } from "./matrics/index";
+import { metricsMiddleware  } from "./matrics/index";
 import client from "prom-client";
 
 const app = express();
-app.use(cleanupMiddleware);
+app.use(metricsMiddleware );
 app.use(express.json());
 
 
